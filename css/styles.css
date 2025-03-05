@@ -1,3 +1,5 @@
+/* === LA BASE === */
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -7,12 +9,251 @@ html {
     box-sizing: inherit;
 }
 
+/* === ÉLÉMENTS === */
+
+.bouton {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 6px 25px;
+    font-size: 1.5rem;
+}
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-
 .material-symbols-outlined {
-  color: black;
+    color: white;
+}
+
+.tagPremier {
+    position: relative;
+    left: calc(50% - 35px);
+    top: -750px;
+    z-index: 3;
+    width: 90px;
+    height: 90px;
+}
+
+/* === TEXTE === */
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: bold;
+}
+
+p, li {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+li {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+li:hover {
+    cursor: pointer;
+    color: white;
+}
+
+/* === SECTIONS === */
+
+/* Header */
+
+header {
+    background-color: #379AE3;
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+header .wrapper .bouton {
+    border: black solid 2px;
+    background-color: white;
+}
+
+/* Hero */
+
+.hero {
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 350px 0;
+}
+
+.hero .wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenuHero {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 40px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 50px;
+    max-width: 550px;
+}
+
+.contenuHero h1 {
+    color: #E67522;
+    margin: 0;
+    font-size: 7rem;
+}
+
+.contenuHero p {
+    color: white;
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+.contenuHero .bouton {
+    background-color: #E67522;
+    color: white;
+    padding: 8px 0;
+    margin: 0 60px;
+    font-size: 1.7rem;
+}
+
+/* Section Principale */
+
+.sectionPrincipale {
+    text-align: center;
+    padding: 80px;
+    background-color: #E6EDF1;
+}
+
+.sectionPrincipale .wrapper p {
+    font-size: 1.75rem;
+    line-height: 30px;
+}
+
+.grilleContenu {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 60px;
+    gap: 20px;
+    height: 800px;
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+article p {
+    margin: 0 20px; 
+}
+
+article .bouton {
+    margin: 40px 85px;
+    border: black solid 2px;
+    background-color: #E67522;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CCDAE3;
+    padding-bottom: 40px;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
+.conteneurLogos {
+    display: flex;
+    gap: 20px;
+}
+
+.cercle {
+    border-radius: 100%;
+    background-color: #E67522;
+    border: white solid 1px;
+    width: 100px;
+    height: 100px;
+    font-size: 65px;
+    text-align: center;
+}
+
+/* Modale */
+
+.modale {
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+}
+
+.modale div {
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px;
+    width: 600px;
+}
+
+.modale div p {
+    font-size: 3rem;
+}
+
+.visible {
+    display: flex;
 }
